@@ -1,5 +1,7 @@
 # 網頁翻譯小幫手 (Page Translator)
 
+![網頁翻譯小幫手](docs/images/social-preview.png)
+
 一個 Chrome 擴充功能，提供滑鼠停留、反白、整頁翻譯。優先使用 Chrome 內建的離線翻譯，必要時改用 Google Cloud Translation；另可用 Gemini 進行「深度查詞」（音標、情境例句、近義詞辨析）。
 
 ## 功能
@@ -33,6 +35,7 @@
 ```
 extension/   擴充功能本體（可直接以「載入未封裝項目」載入）
 docs/        安裝與測試手冊（Markdown 與 HTML）
+docs/images/ 圖片（社群預覽圖）
 ```
 
 `extension/` 內為建置後的檔案。
@@ -42,3 +45,7 @@ docs/        安裝與測試手冊（Markdown 與 HTML）
 - API 金鑰只儲存在你本機 Chrome 的擴充功能儲存空間，不會包含在本 repo 中。
 - 翻譯內容會送往你所選的引擎：Chrome 內建引擎在本機處理；Google Cloud Translation 與 Gemini 會將文字送到 Google 的服務，用量計在你自己的帳號上。
 - 請勿將任何 API 金鑰提交到 repo 或公開分享。
+
+## 授權
+
+本專案採用 [MIT License](LICENSE)。
