@@ -1,0 +1,353 @@
+{
+  "extName": {
+    "message": "網頁翻譯小幫手"
+  },
+  "extDesc": {
+    "message": "滑鼠停留、反白、整頁翻譯。優先使用 Chrome 內建離線翻譯,必要時改用 Google Cloud Translation。"
+  },
+  "cmdTranslatePage": {
+    "message": "翻譯整頁 / 還原"
+  },
+  "cmdTranslateSelection": {
+    "message": "翻譯選取的文字"
+  },
+  "ctxTranslateSelection": {
+    "message": "翻譯選取的文字"
+  },
+  "ctxTranslatePage": {
+    "message": "翻譯此頁"
+  },
+  "enabled": {
+    "message": "啟用翻譯"
+  },
+  "targetLang": {
+    "message": "目標語言"
+  },
+  "translatePage": {
+    "message": "翻譯整頁"
+  },
+  "restorePage": {
+    "message": "還原原文"
+  },
+  "translating": {
+    "message": "翻譯中"
+  },
+  "cancel": {
+    "message": "取消"
+  },
+  "copy": {
+    "message": "複製"
+  },
+  "copied": {
+    "message": "已複製"
+  },
+  "close": {
+    "message": "關閉"
+  },
+  "detected": {
+    "message": "偵測語言"
+  },
+  "pageMode": {
+    "message": "整頁顯示方式"
+  },
+  "modeBilingual": {
+    "message": "雙語對照"
+  },
+  "modeReplace": {
+    "message": "取代原文"
+  },
+  "engineStatus": {
+    "message": "引擎狀態"
+  },
+  "engineChrome": {
+    "message": "Chrome 內建"
+  },
+  "engineGoogle": {
+    "message": "Google Cloud"
+  },
+  "engineCache": {
+    "message": "快取"
+  },
+  "statusReady": {
+    "message": "可用"
+  },
+  "statusDownloadable": {
+    "message": "需下載語言包"
+  },
+  "statusDownloading": {
+    "message": "下載中"
+  },
+  "statusUnavailable": {
+    "message": "不可用"
+  },
+  "download": {
+    "message": "下載"
+  },
+  "downloadPack": {
+    "message": "下載語言包"
+  },
+  "sourceLang": {
+    "message": "來源語言"
+  },
+  "openOptions": {
+    "message": "設定"
+  },
+  "siteExcluded": {
+    "message": "此網站已被排除"
+  },
+  "pageSameLang": {
+    "message": "此頁已是目標語言"
+  },
+  "pageNoText": {
+    "message": "找不到可翻譯的文字"
+  },
+  "pageDone": {
+    "message": "翻譯完成"
+  },
+  "pageRestored": {
+    "message": "已還原"
+  },
+  "errNeedsGesture": {
+    "message": "需要先下載語言包:請點一下工具列圖示下載,或在設定中填入 Google 金鑰。"
+  },
+  "errNoKey": {
+    "message": "此語言 Chrome 內建翻譯不支援,請在設定頁填入 Google API 金鑰。"
+  },
+  "errQuota": {
+    "message": "Google 翻譯已達本月上限或配額用盡。"
+  },
+  "errNetwork": {
+    "message": "網路錯誤,請稍後再試。"
+  },
+  "errUnsupported": {
+    "message": "沒有引擎支援這組語言。"
+  },
+  "errUnknown": {
+    "message": "翻譯失敗:$1"
+  },
+  "optTitle": {
+    "message": "網頁翻譯小幫手 設定"
+  },
+  "optGeneral": {
+    "message": "一般"
+  },
+  "optEngine": {
+    "message": "翻譯引擎"
+  },
+  "optEngineMode": {
+    "message": "引擎順序"
+  },
+  "optChromeFirst": {
+    "message": "Chrome 內建優先,不支援時改用 Google"
+  },
+  "optGoogleFirst": {
+    "message": "Google 優先,失敗時改用 Chrome 內建"
+  },
+  "optChromeOnly": {
+    "message": "只用 Chrome 內建(免費、離線)"
+  },
+  "optGoogleOnly": {
+    "message": "只用 Google Cloud"
+  },
+  "optGoogleKey": {
+    "message": "Google Cloud Translation API 金鑰"
+  },
+  "optGoogleKeyHint": {
+    "message": "建議在 GCP 把金鑰限制為 HTTP referrer:chrome-extension://<擴充功能ID>/*,並只啟用 Cloud Translation API。"
+  },
+  "optTestKey": {
+    "message": "測試金鑰"
+  },
+  "optKeyOk": {
+    "message": "金鑰可用,測試譯文:$1"
+  },
+  "optKeyFail": {
+    "message": "金鑰測試失敗:$1"
+  },
+  "optMonthlyLimit": {
+    "message": "Google 每月字數上限(0 = 不限制)"
+  },
+  "optUsage": {
+    "message": "本月已用字數"
+  },
+  "optHover": {
+    "message": "游標停留翻譯"
+  },
+  "optHoverEnabled": {
+    "message": "啟用游標停留翻譯"
+  },
+  "optHoverModifier": {
+    "message": "觸發方式"
+  },
+  "optModNone": {
+    "message": "直接停留(較容易誤觸)"
+  },
+  "optModCtrl": {
+    "message": "按住 Ctrl 並停留"
+  },
+  "optModAlt": {
+    "message": "按住 Alt 並停留"
+  },
+  "optModShift": {
+    "message": "按住 Shift 並停留"
+  },
+  "optHoverUnit": {
+    "message": "翻譯單位"
+  },
+  "optUnitSentence": {
+    "message": "整句"
+  },
+  "optUnitWord": {
+    "message": "單字"
+  },
+  "optHoverDelay": {
+    "message": "停留延遲(毫秒)"
+  },
+  "optSelection": {
+    "message": "反白翻譯"
+  },
+  "optSelectionEnabled": {
+    "message": "啟用反白翻譯"
+  },
+  "optSelectionAuto": {
+    "message": "反白後立即翻譯(不顯示按鈕)"
+  },
+  "optSelectionEditable": {
+    "message": "在輸入框內也可反白翻譯"
+  },
+  "optPage": {
+    "message": "整頁翻譯"
+  },
+  "optBilingualStyle": {
+    "message": "雙語對照譯文樣式"
+  },
+  "optStyleUnderline": {
+    "message": "底線"
+  },
+  "optStyleMuted": {
+    "message": "淡色"
+  },
+  "optStylePlain": {
+    "message": "無樣式"
+  },
+  "optExcluded": {
+    "message": "排除網站(每行一個網域,例如 docs.google.com)"
+  },
+  "optCache": {
+    "message": "快取"
+  },
+  "optClearCache": {
+    "message": "清除翻譯快取"
+  },
+  "optCacheCleared": {
+    "message": "已清除 $1 筆快取"
+  },
+  "optSave": {
+    "message": "儲存"
+  },
+  "optSaved": {
+    "message": "已儲存"
+  },
+  "optTest": {
+    "message": "測試翻譯"
+  },
+  "optTestInput": {
+    "message": "輸入要測試的文字"
+  },
+  "optShortcuts": {
+    "message": "快捷鍵:Alt+T 翻譯整頁 / 還原、Alt+S 翻譯選取文字。可在 chrome://extensions/shortcuts 修改。"
+  },
+  "deepLookup": {
+    "message": "深度查詞"
+  },
+  "lookingUp": {
+    "message": "查詢中"
+  },
+  "dictExamples": {
+    "message": "情境例句"
+  },
+  "dictSynonyms": {
+    "message": "近義詞辨析"
+  },
+  "dictFailed": {
+    "message": "查詞失敗"
+  },
+  "dictNoResponse": {
+    "message": "背景服務沒有回應，請重新載入擴充功能"
+  },
+  "optDictSection": {
+    "message": "深度查詞 (Gemini)"
+  },
+  "optDictDesc": {
+    "message": "反白單字時，可額外取得音標、情境例句與近義詞辨析。需自備 Gemini API 金鑰（免費申請），用量計算在你自己的帳號上。"
+  },
+  "optDictEnable": {
+    "message": "啟用深度查詞"
+  },
+  "optGeminiKey": {
+    "message": "Gemini API 金鑰"
+  },
+  "optGeminiKeyPh": {
+    "message": "貼上你的 Gemini API Key"
+  },
+  "optGeminiModel": {
+    "message": "模型"
+  },
+  "optGeminiTest": {
+    "message": "測試金鑰"
+  },
+  "optGeminiOk": {
+    "message": "金鑰可用"
+  },
+  "optGetGeminiKey": {
+    "message": "前往 Google AI Studio 免費取得金鑰"
+  },
+  "dictModeWord": {
+    "message": "單字"
+  },
+  "dictModeTranslit": {
+    "message": "音譯"
+  },
+  "dictModeDescribe": {
+    "message": "描述"
+  },
+  "dictGo": {
+    "message": "查詢"
+  },
+  "dictPhWord": {
+    "message": "輸入英文單字"
+  },
+  "dictPhTranslit": {
+    "message": "用中文或注音打出讀音"
+  },
+  "dictPhDescribe": {
+    "message": "描述你想找的字是什麼意思"
+  },
+  "dictHintWord": {
+    "message": "例如 commit、look forward to"
+  },
+  "dictHintTranslit": {
+    "message": "例如「素波ㄟ替」→ superlative"
+  },
+  "dictHintDescribe": {
+    "message": "例如「很想睡但睡不著」"
+  },
+  "dictSearching": {
+    "message": "查詢中…"
+  },
+  "dictNoResult": {
+    "message": "找不到符合的詞，換個說法再試試"
+  },
+  "dictBack": {
+    "message": "返回建議"
+  },
+  "dictNeedKey": {
+    "message": "查詞需要 Gemini 金鑰："
+  },
+  "dictTooLong": {
+    "message": "輸入太長了，請簡短一點"
+  },
+  "dictSpeak": {
+    "message": "朗讀"
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><title>網頁翻譯小幫手 0.2.0 安裝與測試手冊</title><style>body{font-family:'Microsoft JhengHei','PingFang TC',sans-serif;max-width:880px;margin:2rem auto;padding:0 1rem;line-height:1.75;color:#222}
+h1{border-bottom:3px solid #3b6fd4;padding-bottom:.3em}h2{border-bottom:1px solid #ddd;padding-bottom:.2em;margin-top:2em}
+table{border-collapse:collapse;width:100%;margin:1em 0}th,td{border:1px solid #ccc;padding:.5em .7em;text-align:left;vertical-align:top}th{background:#eef2fb}
+code{background:#f2f2f2;padding:.1em .35em;border-radius:3px;font-family:Consolas,monospace}pre{background:#f2f2f2;padding:1em;overflow:auto}
+blockquote{border-left:4px solid #e0a800;background:#fff8e1;margin:1em 0;padding:.5em 1em}a{color:#3b6fd4}
+@media print{body{margin:0;max-width:none}h2{page-break-after:avoid}tr{page-break-inside:avoid}}</style></head><body>
+<h1>網頁翻譯小幫手 0.2.0 安裝與測試手冊</h1>
+<p>適用對象：第一次安裝並設定此 Chrome 擴充功能的使用者。</p>
+<h2>一、功能總覽</h2>
+<table><thead><tr><th>功能</th><th>說明</th><th>是否需要金鑰</th></tr></thead><tbody><tr><td>整頁翻譯</td><td>翻譯整個網頁，可雙語對照，快捷鍵 <code>Alt+T</code></td><td>否（使用 Chrome 內建）</td></tr><tr><td>滑鼠停留翻譯</td><td>滑鼠停在文字上一段時間後顯示翻譯，延遲可在選項頁調整</td><td>否</td></tr><tr><td>反白翻譯</td><td>反白文字後翻譯，快捷鍵 <code>Alt+S</code></td><td>否</td></tr><tr><td>Google Cloud 翻譯</td><td>內建引擎不支援時的備援，或指定優先使用</td><td>需要 Google Cloud Translation API 金鑰</td></tr><tr><td>深度查詞</td><td>音標、情境例句、近義詞辨析</td><td>需要 Gemini API 金鑰</td></tr></tbody></table>
+<p>最低需求：Chrome 138 以上。</p>
+<h2>二、安裝擴充功能</h2>
+<ol><li>下載本 repo（GitHub 頁面「Code → Download ZIP」後解壓縮，或使用 <code>git clone</code>），找到其中的 <code>extension</code> 資料夾，裡面應有 <code>manifest.json</code>。</li><li>在 Chrome 網址列輸入 <code>chrome://extensions</code>。</li><li>開啟右上角「<strong>開發人員模式</strong>」。</li><li>點左上角「<strong>載入未封裝項目</strong>」，選擇 <code>extension</code> 資料夾。</li><li>列表出現「網頁翻譯小幫手」即安裝完成。記下該卡片上的 <strong>擴充功能 ID</strong>（32 個英文字母），之後設定金鑰限制會用到。</li><li>點工具列的拼圖圖示，把此擴充功能「釘選」，方便使用。</li></ol>
+<h2>三、最快上手：只用 Chrome 內建（免費、不需金鑰）</h2>
+<ol><li>開啟選項頁（見第四節）。</li><li>「翻譯引擎 → 引擎順序」選「<strong>只用 Chrome 內建（免費、離線）</strong>」。</li><li>按頁面最下方「<strong>儲存</strong>」。</li><li>到任一外文網頁，按 <code>Alt+T</code> 翻譯整頁，再按一次還原。</li><li>反白一段文字，按 <code>Alt+S</code> 翻譯選取內容。</li></ol>
+<p>首次使用時 Chrome 可能需要下載語言模型，請稍候。</p>
+<h2>四、開啟選項頁</h2>
+<p>擇一：</p>
+<ul><li>點工具列圖示，在彈出視窗按「開啟設定」。</li><li><code>chrome://extensions</code> → 此擴充功能「詳細資料」→「擴充功能選項」。</li></ul>
+<p>選項頁可調整：翻譯單位（整句／單字）、停留延遲、反白翻譯、雙語樣式、排除網站、快取，以及 Google 每月字數上限（預設 450000，0 為不限制）。</p>
+<h2>五、設定 Google Cloud Translation 金鑰（選用）</h2>
+<h3>5.1 建立專案並啟用帳單</h3>
+<ol><li>開啟 <a href="https://console.cloud.google.com/">Google Cloud Console</a>，建立或選擇專案。</li><li>到「帳單」，把專案連結到帳單帳戶。Translation API 必須啟用帳單，但有每月免費額度。</li><li>若出現「無法啟用計費功能：已達可啟用計費功能的專案數量上限」：<ul><li>到<a href="https://console.cloud.google.com/billing">帳單頁面</a> → 選帳戶 → 「帳戶管理」，在「專案」表格找出不用的專案，按「⋮」→「停用帳單功能」。</li><li>或點對話框的「要求提高配額」申請提高上限。</li><li>完成後回到原專案重新「設定帳單帳戶」。</li></ul></li></ol>
+<h3>5.2 啟用 API</h3>
+<p>「API 和服務 → 程式庫」搜尋 <strong>Cloud Translation API</strong>，按「啟用」。</p>
+<h3>5.3 建立 API 金鑰</h3>
+<ol><li>「API 和服務 → 憑證 → 建立憑證 → API 金鑰」。</li><li><strong>應用程式限制</strong>：選「<strong>網站</strong>」，新增：<ul><li><code>chrome-extension://&lt;你的擴充功能ID&gt;/*</code></li><li>若欄位不接受此格式，先選「無」，待測試成功後再回頭加。</li></ul></li><li><strong>API 限制</strong>：選「限制金鑰」，只勾 <strong>Cloud Translation API</strong>。</li><li>按「建立」，複製金鑰（<code>AIza...</code> 開頭）。設定最多需 5 分鐘生效。</li></ol>
+<blockquote>注意：從 Google AI Studio 申請的 Gemini 金鑰不能當作此金鑰使用，否則會出現「API keys are not supported by this API」。</blockquote>
+<h3>5.4 貼到選項頁並測試</h3>
+<ol><li>選項頁「翻譯引擎」→「Google Cloud Translation API 金鑰」欄位，貼上金鑰（可按眼睛圖示確認）。</li><li>按「<strong>測試金鑰</strong>」，顯示成功才算通過。</li><li>「引擎順序」選含 Google 的選項：<ul><li>Chrome 內建優先，不支援時改用 Google</li><li>Google 優先，失敗時改用 Chrome 內建</li><li>只用 Google Cloud</li></ul></li><li>按「<strong>儲存</strong>」。</li><li>在「測試翻譯」輸入文字，確認有譯文。「本月已用字數」應開始累計。</li></ol>
+<h2>六、設定深度查詞（Gemini，選用）</h2>
+<p>深度查詞使用的是 <strong>Gemini 金鑰</strong>，與第五節的 Google Cloud Translation 金鑰是兩把不同的金鑰，不能混用：</p>
+<table><thead><tr><th>金鑰</th><th>用途</th><th>取得位置</th><th>貼到選項頁的位置</th></tr></thead><tbody><tr><td>Google Cloud Translation</td><td>翻譯引擎</td><td>Google Cloud Console</td><td>「翻譯引擎」區塊</td></tr><tr><td>Gemini</td><td>深度查詞</td><td>Google AI Studio（免費）</td><td>「深度查詞 (Gemini)」區塊</td></tr></tbody></table>
+<h3>6.1 取得 Gemini 金鑰</h3>
+<ol><li>開啟 <a href="https://aistudio.google.com/apikey">Google AI Studio 金鑰頁面</a>，以 Google 帳號登入。選項頁也有連結「前往 Google AI Studio 免費取得金鑰」。</li><li>按「建立 API 金鑰」，選擇專案（沒有的話讓它自動建立）。</li><li>複製產生的金鑰。用量計算在你自己的帳號上，免費額度有限制。</li></ol>
+<h3>6.2 貼到選項頁並測試</h3>
+<ol><li>開啟選項頁（第四節），捲動到「<strong>深度查詞 (Gemini)</strong>」區塊。</li><li>勾選「<strong>啟用深度查詞</strong>」。</li><li>在「Gemini API 金鑰」欄位貼上金鑰。</li><li>「模型」欄位通常維持預設即可；若測試失敗或查詞出錯，可改成 AI Studio 目前提供的模型名稱。</li><li>按該區塊的「<strong>測試金鑰</strong>」，顯示「金鑰可用」。</li><li>按頁面最下方「<strong>儲存</strong>」。</li><li>重新開啟彈出視窗（工具列圖示），確認查詞輸入欄可以輸入。</li></ol>
+<h3>6.3 輸入欄是灰色、不能輸入？</h3>
+<p>彈出視窗的查詞輸入框與「查詢」按鈕，在尚未設定 Gemini 金鑰時會被停用，視窗內會顯示「查詞需要 Gemini 金鑰：設定」。這與翻譯引擎是否成功無關。處理方式：</p>
+<ol><li>依 6.1、6.2 完成 Gemini 金鑰設定，並確認已勾選「啟用深度查詞」與已儲存。</li><li>若仍是灰色，到 <code>chrome://extensions</code> 按此擴充功能的重新載入圖示，再開啟彈出視窗。</li><li>只想翻譯、不用查詞的話，可以忽略這個欄位，不影響翻譯功能。</li></ol>
+<h3>使用方式</h3>
+<ul><li><strong>網頁上</strong>：反白單字，點「深度查詞」。</li><li><strong>彈出視窗</strong>：點工具列圖示，使用查詞面板，三種模式：</li></ul>
+<table><thead><tr><th>模式</th><th>輸入</th><th>範例</th></tr></thead><tbody><tr><td>單字</td><td>英文單字或片語</td><td><code>commit</code>、<code>look forward to</code></td></tr><tr><td>音譯</td><td>用中文或注音打出讀音</td><td>「素波ㄟ替」→ superlative</td></tr><tr><td>描述</td><td>描述想找的字的意思</td><td>「很想睡但睡不著」</td></tr></tbody></table>
+<p>結果可按「朗讀」發音，按「返回建議」回到候選清單。</p>
+<h2>七、驗收測試清單</h2>
+<table><thead><tr><th>#</th><th>測試項目</th><th>步驟</th><th>預期結果</th></tr></thead><tbody><tr><td>1</td><td>安裝</td><td><code>chrome://extensions</code> 檢查</td><td>顯示「網頁翻譯小幫手」且無錯誤</td></tr><tr><td>2</td><td>整頁翻譯</td><td>開外文網頁，按 <code>Alt+T</code></td><td>頁面被翻譯，再按一次還原</td></tr><tr><td>3</td><td>反白翻譯</td><td>反白文字，按 <code>Alt+S</code></td><td>出現譯文</td></tr><tr><td>4</td><td>測試翻譯</td><td>選項頁「測試翻譯」輸入文字</td><td>顯示譯文</td></tr><tr><td>5</td><td>Google 金鑰</td><td>選項頁按「測試金鑰」</td><td>顯示成功</td></tr><tr><td>6</td><td>字數統計</td><td>用 Google 引擎翻譯後看選項頁</td><td>「本月已用字數」增加</td></tr><tr><td>7</td><td>Gemini 金鑰</td><td>深度查詞區勾選啟用、貼金鑰、按「測試金鑰」並儲存</td><td>顯示「金鑰可用」</td></tr><tr><td>7a</td><td>查詞輸入欄</td><td>重新開啟彈出視窗</td><td>輸入欄與「查詢」按鈕可使用，不再反灰</td></tr><tr><td>8</td><td>深度查詞</td><td>彈出視窗輸入 <code>commit</code> 按「查詢」</td><td>顯示音標、例句、近義詞</td></tr><tr><td>9</td><td>排除網站</td><td>選項頁加入網域後重新整理該站</td><td>該站不被翻譯</td></tr><tr><td>10</td><td>快取</td><td>按「清除翻譯快取」</td><td>顯示「已清除 N 筆快取」</td></tr></tbody></table>
+<h2>八、疑難排解</h2>
+<table><thead><tr><th>現象</th><th>原因與處理</th></tr></thead><tbody><tr><td>API keys are not supported by this API</td><td>使用了 Gemini 或 AI Studio 的金鑰，或專案未啟用 Cloud Translation API。改用 Cloud Console 建立的金鑰，並確認已啟用 API 與帳單</td></tr><tr><td>金鑰無效或沒有權限</td><td>金鑰貼錯、API 限制未包含 Cloud Translation API，或設定尚未生效（等 5 分鐘）</td></tr><tr><td>驗證失敗 (HTTP 429) 或額度用盡</td><td>超過配額。調整「Google 每月字數上限」，或改回 Chrome 內建</td></tr><tr><td>無法啟用計費功能</td><td>帳單帳戶專案數已達上限，見 5.1</td></tr><tr><td>查詞需要 Gemini 金鑰／查詞輸入欄反灰</td><td>尚未設定 Gemini 金鑰或未啟用深度查詞，見第六節（6.3）</td></tr><tr><td>Gemini 金鑰測試失敗</td><td>確認貼的是 AI Studio 產生的金鑰，不是 Cloud Translation 的金鑰，且沒有多餘空白</td></tr><tr><td>查詞失敗</td><td>檢查 Gemini 金鑰與模型名稱，再按「測試金鑰」</td></tr><tr><td>背景服務沒有回應，請重新載入擴充功能</td><td>到 <code>chrome://extensions</code> 按此擴充功能的重新載入圖示</td></tr><tr><td>輸入太長了</td><td>縮短查詞輸入</td></tr><tr><td>找不到符合的詞</td><td>換個說法再試</td></tr><tr><td>快捷鍵無反應</td><td>到 <code>chrome://extensions/shortcuts</code> 檢查是否衝突，可自行修改</td></tr><tr><td>某些網站無法翻譯</td><td>檢查選項頁「排除網站」清單；Chrome 內建頁面（如 <code>chrome://</code>）不支援擴充功能</td></tr></tbody></table>
+<h2>九、安全提醒</h2>
+<ul><li>API 金鑰等同密碼，不要貼到公開場合或截圖分享。已外流的金鑰請到 Cloud Console 刪除並重新建立。</li><li>一定要設定 API 限制；有條件時再加網站限制。</li><li>建議在 Google Cloud 設定預算提醒，並保留選項頁的每月字數上限，避免意外費用。</li></ul>
+</body></html>

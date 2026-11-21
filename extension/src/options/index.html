@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Translator Options</title>
+    <script type="module" crossorigin src="/assets/index.html-CMrPE2SC.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-P2Xu9kJm.js">
+    <link rel="modulepreload" crossorigin href="/assets/cache-CqVXcMQx.js">
+    <link rel="modulepreload" crossorigin href="/assets/types-0FlRdA6V.js">
+    <link rel="modulepreload" crossorigin href="/assets/i18n-CO6hAzuE.js">
+    <link rel="modulepreload" crossorigin href="/assets/router-CTt1sM9g.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-CXkigJao.css">
+  </head>
+  <body>
+    <main>
+      <h1 data-i18n="optTitle"></h1>
+
+      <section>
+        <h2 data-i18n="optGeneral"></h2>
+        <label class="field">
+          <input type="checkbox" id="enabled" />
+          <span data-i18n="enabled"></span>
+        </label>
+        <label class="field">
+          <span data-i18n="targetLang"></span>
+          <select id="targetLang"></select>
+        </label>
+        <p class="hint" data-i18n="optShortcuts"></p>
+      </section>
+
+      <section>
+        <h2 data-i18n="optEngine"></h2>
+        <div class="field col">
+          <span data-i18n="optEngineMode"></span>
+          <label><input type="radio" name="engineMode" value="chrome-first" /> <span data-i18n="optChromeFirst"></span></label>
+          <label><input type="radio" name="engineMode" value="google-first" /> <span data-i18n="optGoogleFirst"></span></label>
+          <label><input type="radio" name="engineMode" value="chrome-only" /> <span data-i18n="optChromeOnly"></span></label>
+          <label><input type="radio" name="engineMode" value="google-only" /> <span data-i18n="optGoogleOnly"></span></label>
+        </div>
+        <label class="field col">
+          <span data-i18n="optGoogleKey"></span>
+          <div class="inline">
+            <input type="password" id="googleApiKey" autocomplete="off" spellcheck="false" />
+            <button id="toggle-key" type="button">👁</button>
+            <button id="test-key" type="button" data-i18n="optTestKey"></button>
+          </div>
+          <span class="hint" data-i18n="optGoogleKeyHint"></span>
+          <span class="hint" id="key-result"></span>
+        </label>
+        <label class="field">
+          <span data-i18n="optMonthlyLimit"></span>
+          <input type="number" id="googleMonthlyLimit" min="0" step="1000" />
+        </label>
+        <div class="field">
+          <span data-i18n="optUsage"></span>
+          <span id="usage" class="hint"></span>
+        </div>
+      </section>
+
+      <section>
+        <h2 data-i18n="optHover"></h2>
+        <label class="field">
+          <input type="checkbox" id="hover.enabled" />
+          <span data-i18n="optHoverEnabled"></span>
+        </label>
+        <label class="field">
+          <span data-i18n="optHoverModifier"></span>
+          <select id="hover.modifier">
+            <option value="ctrl" data-i18n="optModCtrl"></option>
+            <option value="alt" data-i18n="optModAlt"></option>
+            <option value="shift" data-i18n="optModShift"></option>
+            <option value="none" data-i18n="optModNone"></option>
+          </select>
+        </label>
+        <label class="field">
+          <span data-i18n="optHoverUnit"></span>
+          <select id="hover.unit">
+            <option value="sentence" data-i18n="optUnitSentence"></option>
+            <option value="word" data-i18n="optUnitWord"></option>
+          </select>
+        </label>
+        <label class="field">
+          <span data-i18n="optHoverDelay"></span>
+          <input type="number" id="hover.delay" min="0" max="2000" step="50" />
+        </label>
+      </section>
+
+      <section>
+        <h2 data-i18n="optSelection"></h2>
+        <label class="field"><input type="checkbox" id="selection.enabled" /><span data-i18n="optSelectionEnabled"></span></label>
+        <label class="field"><input type="checkbox" id="selection.auto" /><span data-i18n="optSelectionAuto"></span></label>
+        <label class="field"><input type="checkbox" id="selection.inEditable" /><span data-i18n="optSelectionEditable"></span></label>
+      </section>
+
+      <section>
+        <h2 data-i18n="optPage"></h2>
+        <label class="field">
+          <span data-i18n="pageMode"></span>
+          <select id="page.mode">
+            <option value="bilingual" data-i18n="modeBilingual"></option>
+            <option value="replace" data-i18n="modeReplace"></option>
+          </select>
+        </label>
+        <label class="field">
+          <span data-i18n="optBilingualStyle"></span>
+          <select id="page.bilingualStyle">
+            <option value="underline" data-i18n="optStyleUnderline"></option>
+            <option value="muted" data-i18n="optStyleMuted"></option>
+            <option value="plain" data-i18n="optStylePlain"></option>
+          </select>
+        </label>
+        <label class="field col">
+          <span data-i18n="optExcluded"></span>
+          <textarea id="excludedSites" rows="4" spellcheck="false"></textarea>
+        </label>
+      </section>
+
+      <section>
+        <h2 data-i18n="optDictSection"></h2>
+        <p class="hint" data-i18n="optDictDesc"></p>
+        <label class="field">
+          <input type="checkbox" id="dictionary.enabled" />
+          <span data-i18n="optDictEnable"></span>
+        </label>
+        <label class="field col">
+          <span data-i18n="optGeminiKey"></span>
+          <div class="inline">
+            <input type="password" id="dictionary.geminiApiKey" autocomplete="off" spellcheck="false" data-i18n-ph="optGeminiKeyPh" />
+            <button id="toggle-gemini-key" type="button">👁</button>
+            <button id="test-gemini-key" type="button" data-i18n="optGeminiTest"></button>
+          </div>
+          <a href="https://aistudio.google.com/apikey" target="_blank" rel="noreferrer" class="hint" data-i18n="optGetGeminiKey"></a>
+          <span class="hint" id="gemini-key-result"></span>
+        </label>
+        <label class="field col">
+          <span data-i18n="optGeminiModel"></span>
+          <input type="text" id="dictionary.model" autocomplete="off" spellcheck="false" />
+        </label>
+      </section>
+
+      <section>
+        <h2 data-i18n="optTest"></h2>
+        <div class="field col">
+          <div class="inline">
+            <select id="test-source"></select>
+            <span>→</span>
+            <select id="test-target"></select>
+            <button id="test-run" type="button" data-i18n="optTest"></button>
+          </div>
+          <textarea id="test-input" rows="3" data-i18n-ph="optTestInput"></textarea>
+          <div id="test-output" class="output"></div>
+        </div>
+      </section>
+
+      <section>
+        <h2 data-i18n="optCache"></h2>
+        <button id="clear-cache" type="button" data-i18n="optClearCache"></button>
+        <span id="cache-result" class="hint"></span>
+      </section>
+
+      <div id="saved" class="saved" data-i18n="optSaved"></div>
+    </main>
+  </body>
+</html>

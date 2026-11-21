@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Translator</title>
+    <script type="module" crossorigin src="/assets/index.html-Z7vKPlhG.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-P2Xu9kJm.js">
+    <link rel="modulepreload" crossorigin href="/assets/types-0FlRdA6V.js">
+    <link rel="modulepreload" crossorigin href="/assets/i18n-CO6hAzuE.js">
+    <link rel="modulepreload" crossorigin href="/assets/speech-MrgfOwxN.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-Ch8owfPh.css">
+  </head>
+  <body>
+    <header>
+      <h1 data-i18n="extName"></h1>
+      <button id="open-options" class="icon" data-i18n-title="openOptions" title="">
+        <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.49.49 0 0 0-.59-.22l-2.39.96a7.03 7.03 0 0 0-1.62-.94l-.36-2.54a.48.48 0 0 0-.48-.41h-3.84a.48.48 0 0 0-.47.41l-.36 2.54c-.59.24-1.13.56-1.62.94l-2.39-.96a.49.49 0 0 0-.59.22L2.74 8.87a.48.48 0 0 0 .12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32a.49.49 0 0 0-.12-.61l-2.01-1.58zM12 15.6A3.6 3.6 0 1 1 12 8.4a3.6 3.6 0 0 1 0 7.2z"/></svg>
+      </button>
+    </header>
+
+    <!--
+      查詞面板。放在最上面是因為它是主動使用的工具,下面那些是設定——
+      設定調一次就不動了,查詞每次開 popup 都可能要用。
+    -->
+    <section class="dict" id="dict">
+      <div class="seg full" id="dict-mode">
+        <button data-value="word" data-i18n="dictModeWord"></button>
+        <button data-value="transliterate" data-i18n="dictModeTranslit"></button>
+        <button data-value="describe" data-i18n="dictModeDescribe"></button>
+      </div>
+      <div class="dict-input-row">
+        <!-- placeholder 與提示會隨模式改變,由 popup.ts 設定 -->
+        <textarea id="dict-input" rows="1"></textarea>
+        <button id="dict-go" class="primary go" data-i18n="dictGo"></button>
+      </div>
+      <div class="muted" id="dict-hint"></div>
+      <div id="dict-result" class="dict-result hidden"></div>
+      <div id="dict-nokey" class="muted nokey hidden">
+        <span data-i18n="dictNeedKey"></span>
+        <button id="dict-open-options" class="link" data-i18n="openOptions"></button>
+      </div>
+    </section>
+
+    <section class="row">
+      <label class="switch">
+        <input type="checkbox" id="enabled" />
+        <span class="track"></span>
+        <span data-i18n="enabled"></span>
+      </label>
+    </section>
+
+    <section class="row">
+      <label for="target" data-i18n="targetLang"></label>
+      <select id="target"></select>
+    </section>
+
+    <section class="row">
+      <span data-i18n="pageMode"></span>
+      <div class="seg" id="page-mode">
+        <button data-value="bilingual" data-i18n="modeBilingual"></button>
+        <button data-value="replace" data-i18n="modeReplace"></button>
+      </div>
+    </section>
+
+    <section class="page">
+      <button id="page-btn" class="primary" data-i18n="translatePage"></button>
+      <div id="page-status" class="muted"></div>
+    </section>
+
+    <section class="packs">
+      <div class="title" data-i18n="downloadPack"></div>
+      <div class="row">
+        <select id="pack-source"></select>
+        <span>→</span>
+        <span id="pack-target" class="muted"></span>
+      </div>
+      <div class="row">
+        <span id="pack-status" class="muted"></span>
+        <button id="pack-download" data-i18n="download"></button>
+      </div>
+      <div class="bar hidden" id="pack-bar"><div></div></div>
+    </section>
+
+    <footer class="muted" data-i18n="optShortcuts"></footer>
+  </body>
+</html>

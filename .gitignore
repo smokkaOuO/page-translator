@@ -1,0 +1,22 @@
+# 金鑰與機密
+.env
+.env.*
+*.key
+*.pem
+secrets*.json
+credentials*.json
+
+# 擴充功能打包產物
+*.crx
+*.zip
+
+# 截圖暫存
+screenshots/
+
+# 系統與編輯器
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+.claude/settings.local.json

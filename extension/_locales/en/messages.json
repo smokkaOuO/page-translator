@@ -1,0 +1,353 @@
+{
+  "extName": {
+    "message": "Page Translator"
+  },
+  "extDesc": {
+    "message": "Hover, selection and full-page translation. Uses Chrome's built-in offline translator first, Google Cloud Translation as fallback."
+  },
+  "cmdTranslatePage": {
+    "message": "Translate page / restore"
+  },
+  "cmdTranslateSelection": {
+    "message": "Translate selected text"
+  },
+  "ctxTranslateSelection": {
+    "message": "Translate selected text"
+  },
+  "ctxTranslatePage": {
+    "message": "Translate this page"
+  },
+  "enabled": {
+    "message": "Enable translation"
+  },
+  "targetLang": {
+    "message": "Target language"
+  },
+  "translatePage": {
+    "message": "Translate page"
+  },
+  "restorePage": {
+    "message": "Restore original"
+  },
+  "translating": {
+    "message": "Translating"
+  },
+  "cancel": {
+    "message": "Cancel"
+  },
+  "copy": {
+    "message": "Copy"
+  },
+  "copied": {
+    "message": "Copied"
+  },
+  "close": {
+    "message": "Close"
+  },
+  "detected": {
+    "message": "Detected"
+  },
+  "pageMode": {
+    "message": "Page display mode"
+  },
+  "modeBilingual": {
+    "message": "Bilingual"
+  },
+  "modeReplace": {
+    "message": "Replace original"
+  },
+  "engineStatus": {
+    "message": "Engine status"
+  },
+  "engineChrome": {
+    "message": "Chrome built-in"
+  },
+  "engineGoogle": {
+    "message": "Google Cloud"
+  },
+  "engineCache": {
+    "message": "Cache"
+  },
+  "statusReady": {
+    "message": "Ready"
+  },
+  "statusDownloadable": {
+    "message": "Language pack needed"
+  },
+  "statusDownloading": {
+    "message": "Downloading"
+  },
+  "statusUnavailable": {
+    "message": "Unavailable"
+  },
+  "download": {
+    "message": "Download"
+  },
+  "downloadPack": {
+    "message": "Download language pack"
+  },
+  "sourceLang": {
+    "message": "Source language"
+  },
+  "openOptions": {
+    "message": "Options"
+  },
+  "siteExcluded": {
+    "message": "This site is excluded"
+  },
+  "pageSameLang": {
+    "message": "Page is already in the target language"
+  },
+  "pageNoText": {
+    "message": "No translatable text found"
+  },
+  "pageDone": {
+    "message": "Translation complete"
+  },
+  "pageRestored": {
+    "message": "Restored"
+  },
+  "errNeedsGesture": {
+    "message": "A language pack must be downloaded first: click the toolbar icon to download it, or add a Google API key in options."
+  },
+  "errNoKey": {
+    "message": "Chrome's built-in translator does not support this language. Add a Google API key in options."
+  },
+  "errQuota": {
+    "message": "Google Translate monthly limit or quota reached."
+  },
+  "errNetwork": {
+    "message": "Network error, please try again."
+  },
+  "errUnsupported": {
+    "message": "No engine supports this language pair."
+  },
+  "errUnknown": {
+    "message": "Translation failed: $1"
+  },
+  "optTitle": {
+    "message": "Page Translator Options"
+  },
+  "optGeneral": {
+    "message": "General"
+  },
+  "optEngine": {
+    "message": "Translation engine"
+  },
+  "optEngineMode": {
+    "message": "Engine order"
+  },
+  "optChromeFirst": {
+    "message": "Chrome built-in first, Google when unsupported"
+  },
+  "optGoogleFirst": {
+    "message": "Google first, Chrome built-in on failure"
+  },
+  "optChromeOnly": {
+    "message": "Chrome built-in only (free, offline)"
+  },
+  "optGoogleOnly": {
+    "message": "Google Cloud only"
+  },
+  "optGoogleKey": {
+    "message": "Google Cloud Translation API key"
+  },
+  "optGoogleKeyHint": {
+    "message": "Restrict the key in GCP to HTTP referrer chrome-extension://<extension-id>/* and to the Cloud Translation API only."
+  },
+  "optTestKey": {
+    "message": "Test key"
+  },
+  "optKeyOk": {
+    "message": "Key works. Sample: $1"
+  },
+  "optKeyFail": {
+    "message": "Key test failed: $1"
+  },
+  "optMonthlyLimit": {
+    "message": "Google monthly character limit (0 = unlimited)"
+  },
+  "optUsage": {
+    "message": "Characters used this month"
+  },
+  "optHover": {
+    "message": "Hover translation"
+  },
+  "optHoverEnabled": {
+    "message": "Enable hover translation"
+  },
+  "optHoverModifier": {
+    "message": "Trigger"
+  },
+  "optModNone": {
+    "message": "Hover only (easy to trigger accidentally)"
+  },
+  "optModCtrl": {
+    "message": "Hold Ctrl and hover"
+  },
+  "optModAlt": {
+    "message": "Hold Alt and hover"
+  },
+  "optModShift": {
+    "message": "Hold Shift and hover"
+  },
+  "optHoverUnit": {
+    "message": "Unit"
+  },
+  "optUnitSentence": {
+    "message": "Sentence"
+  },
+  "optUnitWord": {
+    "message": "Word"
+  },
+  "optHoverDelay": {
+    "message": "Hover delay (ms)"
+  },
+  "optSelection": {
+    "message": "Selection translation"
+  },
+  "optSelectionEnabled": {
+    "message": "Enable selection translation"
+  },
+  "optSelectionAuto": {
+    "message": "Translate immediately after selecting (no button)"
+  },
+  "optSelectionEditable": {
+    "message": "Also allow selections inside input fields"
+  },
+  "optPage": {
+    "message": "Full-page translation"
+  },
+  "optBilingualStyle": {
+    "message": "Bilingual translation style"
+  },
+  "optStyleUnderline": {
+    "message": "Underline"
+  },
+  "optStyleMuted": {
+    "message": "Muted"
+  },
+  "optStylePlain": {
+    "message": "Plain"
+  },
+  "optExcluded": {
+    "message": "Excluded sites (one domain per line, e.g. docs.google.com)"
+  },
+  "optCache": {
+    "message": "Cache"
+  },
+  "optClearCache": {
+    "message": "Clear translation cache"
+  },
+  "optCacheCleared": {
+    "message": "Cleared $1 cached entries"
+  },
+  "optSave": {
+    "message": "Save"
+  },
+  "optSaved": {
+    "message": "Saved"
+  },
+  "optTest": {
+    "message": "Test translation"
+  },
+  "optTestInput": {
+    "message": "Enter text to test"
+  },
+  "optShortcuts": {
+    "message": "Shortcuts: Alt+T translate page / restore, Alt+S translate selection. Change them at chrome://extensions/shortcuts."
+  },
+  "deepLookup": {
+    "message": "Deep lookup"
+  },
+  "lookingUp": {
+    "message": "Looking up"
+  },
+  "dictExamples": {
+    "message": "Examples in context"
+  },
+  "dictSynonyms": {
+    "message": "Synonyms compared"
+  },
+  "dictFailed": {
+    "message": "Lookup failed"
+  },
+  "dictNoResponse": {
+    "message": "No response from the background service; try reloading the extension"
+  },
+  "optDictSection": {
+    "message": "Deep lookup (Gemini)"
+  },
+  "optDictDesc": {
+    "message": "When you select a word, optionally get its phonetics, contextual examples and synonym nuances. Requires your own Gemini API key (free to obtain); usage is billed to your own account."
+  },
+  "optDictEnable": {
+    "message": "Enable deep lookup"
+  },
+  "optGeminiKey": {
+    "message": "Gemini API key"
+  },
+  "optGeminiKeyPh": {
+    "message": "Paste your Gemini API key"
+  },
+  "optGeminiModel": {
+    "message": "Model"
+  },
+  "optGeminiTest": {
+    "message": "Test key"
+  },
+  "optGeminiOk": {
+    "message": "Key works"
+  },
+  "optGetGeminiKey": {
+    "message": "Get a free key from Google AI Studio"
+  },
+  "dictModeWord": {
+    "message": "Word"
+  },
+  "dictModeTranslit": {
+    "message": "Sounds like"
+  },
+  "dictModeDescribe": {
+    "message": "Describe"
+  },
+  "dictGo": {
+    "message": "Look up"
+  },
+  "dictPhWord": {
+    "message": "Enter an English word"
+  },
+  "dictPhTranslit": {
+    "message": "Type how it sounds"
+  },
+  "dictPhDescribe": {
+    "message": "Describe the word you want"
+  },
+  "dictHintWord": {
+    "message": "e.g. commit, look forward to"
+  },
+  "dictHintTranslit": {
+    "message": "e.g. \"ah-ten-shun\" to find attention"
+  },
+  "dictHintDescribe": {
+    "message": "e.g. \"wanting to sleep but unable to\""
+  },
+  "dictSearching": {
+    "message": "Searching…"
+  },
+  "dictNoResult": {
+    "message": "No match. Try rephrasing."
+  },
+  "dictBack": {
+    "message": "Back to suggestions"
+  },
+  "dictNeedKey": {
+    "message": "Lookup needs a Gemini key:"
+  },
+  "dictTooLong": {
+    "message": "Input is too long, please shorten it."
+  },
+  "dictSpeak": {
+    "message": "Speak"
+  }
+}
