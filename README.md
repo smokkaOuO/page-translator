@@ -28,6 +28,10 @@
 3. 點「載入未封裝項目」，選擇 `extension` 資料夾。
 4. 開啟擴充功能的選項頁，依需求設定翻譯引擎與金鑰。
 
+擴充功能 ID 固定為 `mhojjifbdpkeodikfnjacjopdidbjojg`。設定 Google Cloud 金鑰的網站限制時，填入 `chrome-extension://mhojjifbdpkeodikfnjacjopdidbjojg/*` 即可，重新安裝或更新版本也不用改。
+
+一般版 Chrome 不允許安裝非商店來源的 .crx 封裝檔，因此請使用「載入未封裝項目」。
+
 完整步驟、金鑰申請方式、驗收清單與疑難排解，請見 [安裝與測試手冊](docs/安裝與測試手冊.md)。
 
 ## 目錄結構

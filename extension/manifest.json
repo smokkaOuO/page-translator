@@ -3,6 +3,7 @@
   "name": "__MSG_extName__",
   "description": "__MSG_extDesc__",
   "version": "0.2.0",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6y8mH2iUYiEQQ0RZSlEdOoL7EcrggPZFAI2IY8i+q9/lRBNP6ViOXMYf37HWiluCLQCJ2ZehEzAgnqHWpnieubx3o/o1e6tHOF7wa2zldD5Zdz2VeEu9s/o6MQE686xjO2M65rKpR7cLXNQ3jhb1PfuArVhKTgmpl9fsMz12/9HUQVxJAa0UHgUq2qrM7N0A3Vicd2G/tA3wo7hg8fdskADDnm2gDSKuXuN/jHMSEc3kzrK/m+g0mQPVZ2xKXGhDlHsc5PUwTN4u+0Z6l3FwDiTJO9j574DGK10UJERL7faUxJ7vk03Bo8OrnTxy1MX0uOFxARKRx4IjasygElA2PwIDAQAB",
   "default_locale": "zh_TW",
   "minimum_chrome_version": "138",
   "icons": {
