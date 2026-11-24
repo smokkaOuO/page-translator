@@ -38,7 +38,7 @@ blockquote{border-left:4px solid #e0a800;background:#fff8e1;margin:1em 0;padding
 <h3>6.1 取得 Gemini 金鑰</h3>
 <ol><li>開啟 <a href="https://aistudio.google.com/apikey">Google AI Studio 金鑰頁面</a>，以 Google 帳號登入。選項頁也有連結「前往 Google AI Studio 免費取得金鑰」。</li><li>按「建立 API 金鑰」，選擇專案（沒有的話讓它自動建立）。</li><li>複製產生的金鑰。用量計算在你自己的帳號上，免費額度有限制。</li></ol>
 <h3>6.2 貼到選項頁並測試</h3>
-<ol><li>開啟選項頁（第四節），捲動到「<strong>深度查詞 (Gemini)</strong>」區塊。</li><li>勾選「<strong>啟用深度查詞</strong>」。</li><li>在「Gemini API 金鑰」欄位貼上金鑰。</li><li>「模型」欄位通常維持預設即可；若測試失敗或查詞出錯，可改成 AI Studio 目前提供的模型名稱。</li><li>按該區塊的「<strong>測試金鑰</strong>」，顯示「金鑰可用」。</li><li>按頁面最下方「<strong>儲存</strong>」。</li><li>重新開啟彈出視窗（工具列圖示），確認查詞輸入欄可以輸入。</li></ol>
+<ol><li>開啟選項頁（第四節），捲動到「<strong>深度查詞 (Gemini)</strong>」區塊。</li><li>勾選「<strong>啟用深度查詞</strong>」。</li><li>在「Gemini API 金鑰」欄位貼上金鑰。</li><li>「模型」是下拉選單，預設為 <code>gemini-3.5-flash-lite</code>（便宜、快速）。選單內容會用你的 Gemini 金鑰向 Google 即時取得，可依需求切換：<ul><li><strong>flash-lite</strong>：預設，適合日常查詞。</li><li><strong>flash</strong>：音譯等較難的查詢更準，但每次花費約為 flash-lite 的 4–10 倍。</li><li><strong>pro</strong>：最準也最貴，查詞通常不需要。</li><li>尚未填金鑰時，選單只會顯示目前使用的模型；貼上金鑰後清單會自動更新。</li><li>切換模型後不必清除快取，查詞結果會依模型分開快取。</li></ul></li><li>按該區塊的「<strong>測試金鑰</strong>」，顯示「金鑰可用」。</li><li>按頁面最下方「<strong>儲存</strong>」。</li><li>重新開啟彈出視窗（工具列圖示），確認查詞輸入欄可以輸入。</li></ol>
 <h3>6.3 輸入欄是灰色、不能輸入？</h3>
 <p>彈出視窗的查詞輸入框與「查詢」按鈕，在尚未設定 Gemini 金鑰時會被停用，視窗內會顯示「查詞需要 Gemini 金鑰：設定」。這與翻譯引擎是否成功無關。處理方式：</p>
 <ol><li>依 6.1、6.2 完成 Gemini 金鑰設定，並確認已勾選「啟用深度查詞」與已儲存。</li><li>若仍是灰色，到 <code>chrome://extensions</code> 按此擴充功能的重新載入圖示，再開啟彈出視窗。</li><li>只想翻譯、不用查詞的話，可以忽略這個欄位，不影響翻譯功能。</li></ol>

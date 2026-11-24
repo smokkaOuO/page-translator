@@ -293,6 +293,9 @@
   "optGeminiModel": {
     "message": "Model"
   },
+  "optGeminiModelHint": {
+    "message": "The list is fetched from Google with the Gemini key above. flash-lite is cheap and fast; flash or pro is more accurate but costs more."
+  },
   "optGeminiTest": {
     "message": "Test key"
   },
@@ -315,10 +318,10 @@
     "message": "Look up"
   },
   "dictPhWord": {
-    "message": "Enter an English word"
+    "message": "Enter a word"
   },
   "dictPhTranslit": {
-    "message": "Type how it sounds"
+    "message": "Type how it sounds (Chinese, English or Zhuyin)"
   },
   "dictPhDescribe": {
     "message": "Describe the word you want"

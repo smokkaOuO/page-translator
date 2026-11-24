@@ -293,6 +293,9 @@
   "optGeminiModel": {
     "message": "模型"
   },
+  "optGeminiModelHint": {
+    "message": "清單會用上方的 Gemini 金鑰向 Google 取得；flash-lite 便宜快速，flash 或 pro 較準但較貴。"
+  },
   "optGeminiTest": {
     "message": "測試金鑰"
   },
@@ -315,19 +318,19 @@
     "message": "查詢"
   },
   "dictPhWord": {
-    "message": "輸入英文單字"
+    "message": "輸入單字"
   },
   "dictPhTranslit": {
-    "message": "用中文或注音打出讀音"
+    "message": "用中文、英文或注音打出讀音"
   },
   "dictPhDescribe": {
     "message": "描述你想找的字是什麼意思"
   },
   "dictHintWord": {
-    "message": "例如 commit、look forward to"
+    "message": "例如 commit、사랑"
   },
   "dictHintTranslit": {
-    "message": "例如「斯波ㄍㄟ替」→ spaghetti"
+    "message": "例如「斯波ㄍㄟ替」→ spaghetti、「安妞哈誰呦」→ 안녕하세요"
   },
   "dictHintDescribe": {
     "message": "例如「很想睡但睡不著」"
